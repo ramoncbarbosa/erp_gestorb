@@ -38,48 +38,57 @@ O **ERP GestorB** é um sistema de gestão empresarial focado em gerenciar funci
 
 
 ## Estrutura do Projeto
-```plaintext
+```
 📁erp_gestorb
-├── 📁src
-│   ├── 📁@types
-│   │   └── express.d.ts
-│   ├── 📁controllers
-│   │   ├── 📁Projects
-│   │   │   └── projectController.ts
-│   │   ├── 📁Roles
-│   │   │   └── roleController.ts
-│   │   └── 📁User
-│   │       └── userController.ts
-│   ├── 📁middlewares
-│   │   ├── 📁errorsMiddleware
-│   │   │   └── errorsMiddleware.ts
-│   │   ├── 📁isAuthenticated
-│   │   │   └── isAuthenticated.ts
-│   │   └── 📁isAuthorized
-│   │       └── isAuthorized.ts
-│   ├── 📁prisma
-│   │   ├── 📁prisma
-│   │   │   └── index.ts
-│   │   └── schema.prisma
-│   ├── 📁routes
-│   │   ├── routes.ts
-│   │   └── 📁routesPath
-│   │       ├── projectRoute.ts
-│   │       ├── roleRoute.ts
-│   │       └── userRoute.ts
-│   ├── 📁services
-│   │   ├── 📁Projects
-│   │   │   └── projectService.ts
-│   │   ├── 📁Roles
-│   │   │   └── roleService.ts
-│   │   └── 📁User
-│   │       └── userService.ts
-│   └── server.ts
-├── .env
-├── .gitignore
-├── package.json
-├── tsconfig.json
-└── README.md
+    └── 📁src
+        └── 📁@types
+            └── express.d.ts
+        └── 📁controllers
+            └── 📁Projects
+                └── projectController.ts
+            └── 📁Roles
+                └── roleController.ts
+            └── 📁User
+                └── userController.ts
+        └── 📁exceptions
+            └── AppError.ts
+        └── 📁middlewares
+            └── 📁errorsMiddleware
+                └── errorsMiddleware.ts
+            └── 📁isAuthenticated
+                └── isAuthenticated.ts
+            └── 📁isAuthorized
+                └── isAuthorized.ts
+        └── 📁prisma
+            └── 📁migrations
+                └── 📁20250115024658_init
+                    └── migration.sql
+                └── 📁20250115123907_add_user_project_relation
+                    └── migration.sql
+                └── migration_lock.toml
+            └── 📁prisma
+                └── index.ts
+            └── schema.prisma
+            └── seed.ts
+        └── 📁routes
+            └── routes.ts
+            └── 📁routesPath
+                └── projectRoute.ts
+                └── userRoute.ts
+        └── server.ts
+        └── 📁services
+            └── 📁Projects
+                └── projectService.ts
+            └── 📁Roles
+                └── roleService.ts
+            └── 📁User
+                └── userService.ts
+    └── .env
+    └── .gitignore
+    └── package-lock.json
+    └── package.json
+    └── README.md
+    └── tsconfig.json
 ```
 
 ## Endpoints Principais
