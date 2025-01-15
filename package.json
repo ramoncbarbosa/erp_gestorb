@@ -24,8 +24,7 @@
 		"dotenv": "^16.4.7",
 		"express": "^4.21.2",
 		"express-session": "^1.18.1",
-		"jsonwebtoken": "^9.0.2",
-		"prisma": "^6.2.1"
+		"jsonwebtoken": "^9.0.2"
 	},
 	"devDependencies": {
 		"@types/axios": "^0.9.36",
@@ -36,7 +35,9 @@
 		"@types/node": "^22.10.6",
 		"express-async-errors": "^3.1.1",
 		"nodemon": "^3.1.9",
+		"prisma": "^6.2.1",
 		"ts-node": "^10.9.2",
+		"tsx": "^4.19.2",
 		"typescript": "^5.7.3"
 	}
 }
