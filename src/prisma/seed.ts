@@ -1,5 +1,5 @@
 import prisma from "./prisma/index";
-import bcrypt from "bcrypt";
+import bcrypt from "bcryptjs";
 
 async function main() {
   try {
