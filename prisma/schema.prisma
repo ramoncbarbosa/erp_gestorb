@@ -19,6 +19,8 @@ model User {
   managedProjects Project[]         @relation("ProjectManager")
   role            Role              @relation(fields: [roleId], references: [id])
   Department      Department[]      @relation("DepartmentEmployees")
+
+  projects        UserProject[]
 }
 
 model Role {
@@ -44,6 +46,8 @@ model Project {
   FinancialRecord FinancialRecord[]
   department      Department?       @relation(fields: [departmentId], references: [id])
   manager         User?             @relation("ProjectManager", fields: [managerId], references: [id])
+
+  users           UserProject[]
 }
 
 model Department {
@@ -67,4 +71,16 @@ model FinancialRecord {
   updatedAt   DateTime @updatedAt
   createdBy   User     @relation(fields: [createdById], references: [id])
   project     Project? @relation(fields: [projectId], references: [id])
+}
+
+model UserProject {
+  userId    Int
+  projectId Int
+  role      String         
+  createdAt DateTime @default(now())
+
+  user      User     @relation(fields: [userId], references: [id])
+  project   Project  @relation(fields: [projectId], references: [id])
+
+  @@id([userId, projectId]) 
 }
