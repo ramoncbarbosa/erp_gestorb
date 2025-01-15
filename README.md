@@ -12,11 +12,13 @@ O **ERP GestorB** é um sistema de gestão empresarial focado em gerenciar funci
   - Criação e gerenciamento de projetos.
   - Alocação de gerentes e monitoramento de progresso.
 
+- **Gestão Financeira**:
+  - Registro e controle de transações financeiras relacionadas a projetos e folhas de pagamento.
+
 <!-- - **Gestão de Departamentos**:
   - Cadastro e monitoramento de departamentos e seus funcionários.
 
-- **Gestão Financeira**:
-  - Registro e controle de transações financeiras relacionadas a projetos e folhas de pagamento.
+
 
 - **Autenticação e Autorização**:
   - Login seguro com JWT.
@@ -31,25 +33,37 @@ O **ERP GestorB** é um sistema de gestão empresarial focado em gerenciar funci
 - **ORM**: Prisma
 - **Autenticação**: JSON Web Tokens (JWT)
 - **Outras Bibliotecas**:
-  - bcrypt
+  - bcryptjs
   - cors
   - dotenv
   - express-async-errors
+  - express-session
 
 
 ## Estrutura do Projeto
 ```
-📁erp_gestorb
+└── 📁erp_gestorb
     └── 📁src
         └── 📁@types
             └── express.d.ts
         └── 📁controllers
+            └── 📁Financial
+                └── financialController.ts
             └── 📁Projects
-                └── projectController.ts
+                └── createProjectController.ts
+                └── deleteProjectController.ts
+                └── listProjectController.ts
+                └── updateProjectController.ts
             └── 📁Roles
-                └── roleController.ts
+                └── createRoleController.ts
+                └── listRoleController.ts
+                └── removeRoleController.ts
+                └── updateRoleController.ts
             └── 📁User
-                └── userController.ts
+                └── createUserController.ts
+                └── listUserController.ts
+                └── removeUserController.ts
+                └── updateUserController.ts
         └── 📁exceptions
             └── AppError.ts
         └── 📁middlewares
@@ -73,16 +87,28 @@ O **ERP GestorB** é um sistema de gestão empresarial focado em gerenciar funci
         └── 📁routes
             └── routes.ts
             └── 📁routesPath
+                └── financialRoute.ts
                 └── projectRoute.ts
                 └── userRoute.ts
         └── server.ts
         └── 📁services
+            └── 📁Financial
+                └── financialService.ts
             └── 📁Projects
-                └── projectService.ts
+                └── createProjectService.ts
+                └── deleteProjectService.ts
+                └── listProjectService.ts
+                └── updateProjectService.ts
             └── 📁Roles
-                └── roleService.ts
+                └── createRoleService.ts
+                └── listRoleService.ts
+                └── removeRoleService.ts
+                └── updateRoleService.ts
             └── 📁User
-                └── userService.ts
+                └── createUserService.ts
+                └── listUserService.ts
+                └── removeUserService.ts
+                └── updateUserService.ts
     └── .env
     └── .gitignore
     └── package-lock.json
