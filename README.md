@@ -12,7 +12,7 @@ O **ERP GestorB** é um sistema de gestão empresarial focado em gerenciar funci
   - Criação e gerenciamento de projetos.
   - Alocação de gerentes e monitoramento de progresso.
 
-- **Gestão de Departamentos**:
+<!-- - **Gestão de Departamentos**:
   - Cadastro e monitoramento de departamentos e seus funcionários.
 
 - **Gestão Financeira**:
@@ -23,7 +23,7 @@ O **ERP GestorB** é um sistema de gestão empresarial focado em gerenciar funci
   - Controle de acesso baseado em papéis.
 
 - **Relatórios**:
-  - Visualização de relatórios financeiros e operacionais em tempo real.
+  - Visualização de relatórios financeiros e operacionais em tempo real. -->
 
 ## Tecnologias Utilizadas
 - **Backend**: Node.js, Express, TypeScript
